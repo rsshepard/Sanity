@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SanityDataModel">
+  <DataContextMoniker Name="/SanityDataModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="22ed9752-1c7a-48ce-8e80-f4a26974d49e" absoluteBounds="5.875, 0.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SanityDataModelDataContext/Idea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76c7a6d7-f6b0-4972-9787-9636eb7ebb87" absoluteBounds="5.8900000000000006, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9159433-baf1-4a5c-babf-83d2046f0c24" absoluteBounds="6.625, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SanityDataModelDataContext/Thought" />
+      <nestedChildShapes>
+        <elementListCompartment Id="859fa68f-047b-48d3-84d0-b5d4654334cf" absoluteBounds="6.64, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de62cbfb-0369-4317-97a0-bed7b61b32c1" absoluteBounds="0.5, 0.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SanityDataModelDataContext/project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40e77bee-a57d-4b49-b67f-7125c61f5f66" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f343def6-b8e7-4a00-88b2-24c3d5c2f059" absoluteBounds="1.25, 3.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SanityDataModelDataContext/Task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76fdf54b-63f4-483f-9d43-faf723f5234d" absoluteBounds="1.2649999999999997, 4.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 2.64589680989583); (7.25 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SanityDataModelDataContext/Idea/Idea_Thought" />
+      <nodes>
+        <classShapeMoniker Id="22ed9752-1c7a-48ce-8e80-f4a26974d49e" />
+        <classShapeMoniker Id="f9159433-baf1-4a5c-babf-83d2046f0c24" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.57294840494792); (5.875 : 1.57294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SanityDataModelDataContext/project/project_Idea" />
+      <nodes>
+        <classShapeMoniker Id="de62cbfb-0369-4317-97a0-bed7b61b32c1" />
+        <classShapeMoniker Id="22ed9752-1c7a-48ce-8e80-f4a26974d49e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.21875 : 2.64589680989583); (6.21875 : 5.8069482421875); (3.25 : 5.8069482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SanityDataModelDataContext/Idea/Idea_Task" />
+      <nodes>
+        <classShapeMoniker Id="22ed9752-1c7a-48ce-8e80-f4a26974d49e" />
+        <classShapeMoniker Id="f343def6-b8e7-4a00-88b2-24c3d5c2f059" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 2.27089680989583); (1.875 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SanityDataModelDataContext/project/project_Task" />
+      <nodes>
+        <classShapeMoniker Id="de62cbfb-0369-4317-97a0-bed7b61b32c1" />
+        <classShapeMoniker Id="f343def6-b8e7-4a00-88b2-24c3d5c2f059" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

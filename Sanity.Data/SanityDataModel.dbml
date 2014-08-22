@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sanity" Class="SanityDataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ss-mac\sqlexpress;Initial Catalog=sanity;Persist Security Info=True;User ID=sanity" SettingsObjectName="Sanity.Data.Properties.Settings" SettingsPropertyName="sanityConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Idea" Member="Ideas">
+    <Type Name="Idea">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Idea_Thought" Member="Thoughts" ThisKey="ID" OtherKey="IdeaID" Type="Thought" />
+      <Association Name="Idea_Task" Member="Tasks" ThisKey="ID" OtherKey="IdeaID" Type="Task" />
+      <Association Name="project_Idea" Member="project" ThisKey="ProjectID" OtherKey="ID" Type="project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Thought" Member="Thoughts">
+    <Type Name="Thought">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdeaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Idea_Thought" Member="Idea" ThisKey="IdeaID" OtherKey="ID" Type="Idea" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.project" Member="projects">
+    <Type Name="project">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JobNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="project_Idea" Member="Ideas" ThisKey="ID" OtherKey="ProjectID" Type="Idea" />
+      <Association Name="project_Task" Member="Tasks" ThisKey="ID" OtherKey="ProjectID" Type="Task" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Task" Member="Tasks">
+    <Type Name="Task">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IdeaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Completed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Due" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Idea_Task" Member="Idea" ThisKey="IdeaID" OtherKey="ID" Type="Idea" IsForeignKey="true" />
+      <Association Name="project_Task" Member="project" ThisKey="ProjectID" OtherKey="ID" Type="project" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
