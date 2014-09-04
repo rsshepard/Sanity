@@ -129,6 +129,7 @@ namespace Sanity.web.Controllers
             { 
                Task t = new Task()
                 {
+                    ID=tsk.ID,
                     Created = tsk.Created == DateTime.MinValue ? (DateTime?)null : tsk.Created,
                     Due = tsk.Due == DateTime.MinValue ? (DateTime?)null : tsk.Due,
                     Completed = tsk.Completed == DateTime.MinValue ? (DateTime?)null : tsk.Completed,

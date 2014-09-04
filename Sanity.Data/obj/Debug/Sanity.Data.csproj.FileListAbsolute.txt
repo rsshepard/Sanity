@@ -4,3 +4,9 @@ c:\Users\ss\documents\visual studio 2012\Projects\Sanity.web\Sanity.Data\bin\Deb
 c:\Users\ss\documents\visual studio 2012\Projects\Sanity.web\Sanity.Data\obj\Debug\Sanity.Data.csprojResolveAssemblyReference.cache
 c:\Users\ss\documents\visual studio 2012\Projects\Sanity.web\Sanity.Data\obj\Debug\Sanity.Data.dll
 c:\Users\ss\documents\visual studio 2012\Projects\Sanity.web\Sanity.Data\obj\Debug\Sanity.Data.pdb
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\bin\Debug\Sanity.Data.dll.config
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\bin\Debug\Sanity.Data.dll
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\bin\Debug\Sanity.Data.pdb
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\obj\Debug\Sanity.Data.csprojResolveAssemblyReference.cache
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\obj\Debug\Sanity.Data.dll
+C:\Users\ss.DOMAIN\Documents\Visual Studio 2012\Projects\Sanity\Sanity.Data\obj\Debug\Sanity.Data.pdb
